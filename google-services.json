@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "927666243449",
+    "project_id": "food-5b17c",
+    "storage_bucket": "food-5b17c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927666243449:android:c4ef0c4b3ad4e7495a91a8",
+        "android_client_info": {
+          "package_name": "com.foodworld.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927666243449-a6t3rj08ilu9kfqkeej8b0b7rmv8296h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodworld.app",
+            "certificate_hash": "4e0c31a9163004119810eed1244671dbd3c350b8"
+          }
+        },
+        {
+          "client_id": "927666243449-r5iamo8kbn1uu9ekssv8nojgppucnsks.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodworld.app",
+            "certificate_hash": "3dcaf2ce34fb574a5d3001fa56e0accad79b3298"
+          }
+        },
+        {
+          "client_id": "927666243449-khnp9grgtlbhet2chgkbq01ru6a4c2vh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFnG7m4nH7r7fSHXt8FqhUDOFikAx70Qc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927666243449-khnp9grgtlbhet2chgkbq01ru6a4c2vh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

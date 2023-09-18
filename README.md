@@ -35,10 +35,4 @@ JavaScript: Uygulamamızın temeli JavaScript ile oluşturulmuştur, bu da hızl
 Concert App, müzik tutkunları için müziği daha yakından takip etme ve canlı performansları deneyimleme fırsatı sunar. Müziği seven herkes için vazgeçilmez bir uygulama olan Concert App'i indirin ve en sevdiğiniz etkinlikleri kaçırmayın!
 
 </p>
-## Katkıda Bulunma
 
-Projeye katkıda bulunma yolları ve katkı kuralları burada belirtilir.
-
-## Lisans
-
-Bu proje [Lisans Adı] altında lisanslanmıştır. Daha fazla bilgi için [LICENSE.md](LICENSE.md) dosyasına bakın.

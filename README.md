@@ -8,7 +8,7 @@ Proje açıklaması buraya yazılır.
 
 <h1>Başlık: Müzik Tutkunları için Konser Takip Uygulaması: Concert App</h1>
 
-<h2>Giriş:</h2>
+<h2>Giriş</h2>
 
 <p>
   Concert App, müziği sevenler için tasarlanmış yenilikçi bir mobil uygulamadır. Bu uygulama, dünya genelindeki konser ve etkinlikleri takip etmenizi sağlar ve müzikle dolu bir dünyanın kapılarını açar. İşte Concert App'in sunduğu bazı özellikler:

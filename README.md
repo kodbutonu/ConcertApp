@@ -1,6 +1,5 @@
 # Concert-App
 
-Proje açıklaması buraya yazılır.
 
 ## Video Tanıtım
 

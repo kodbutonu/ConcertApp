@@ -1,7 +1,3 @@
-# Concert-App
-
-
-[![PartyPulse](https://www.example.com/video_thumbnail.png)](https://www.example.com/video_link.mp4)
 
 <h1>Başlık: Müzik Tutkunları için Konser Takip Uygulaması: Concert App</h1>
 

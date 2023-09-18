@@ -1,5 +1,5 @@
 
-<h1>Başlık: Müzik Tutkunları için Konser Takip Uygulaması: Concert App</h1>
+<h1> Müzik Tutkunları için Konser Takip Uygulaması: Concert App</h1>
 
 <h2>Giriş</h2>
 

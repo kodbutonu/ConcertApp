@@ -5,7 +5,7 @@ import ButtonDesign from "../components/ButtonDesign";
 import Line from "../components/Line";
 import TextDescription from "../components/TextDescription";
 import { AntDesign } from "@expo/vector-icons";
-
+import TextHeader from '../components/TextHeader';
 const LoginScreen = () => {
     const navigation = useNavigation();
     return (
@@ -17,6 +17,7 @@ const LoginScreen = () => {
                     style={styles.image}
                     source={require("../assets/logox.png")}
                 ></Image>
+                <TextHeader text='PartyPulse'/>
             </View>
             <View>
                 <Text style={styles.text}>Sign up to continue</Text>
@@ -64,16 +65,13 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
     logo: {
-        flex: 0.7,
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 100,
+        borderRadius: 260,
     },
     image: {
-        marginTop: 100,
         height: 150,
-        width: 110,
-        marginBottom: 230,
+        width: 160,
     },
     textDesign: {
         marginTop: 40,

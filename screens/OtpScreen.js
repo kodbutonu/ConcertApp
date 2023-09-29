@@ -141,6 +141,10 @@ const styles = StyleSheet.create({
     otpContainer: {
         flexDirection: 'row',
     },
+    xd:{
+        marginBottom:20
+    },
+
 
     otpInput: {
         width: 50,

@@ -14,11 +14,11 @@ import ButtonDesign from "../components/ButtonDesign";
 import firebase from "@firebase/app-compat";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useFavorites } from "../context/FavoriteContext";
 import axios from "axios";
 import { EvilIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 const HomeScreen = () => {
   const images = {
     z: require("../assets/z.png"),
@@ -78,20 +78,20 @@ const HomeScreen = () => {
 
     // Bu fonksiyon, tarih aralığına göre etkinlikleri getiren Axios isteğini yapar.
     const handleDateButtonClick = (dateRange) => {
-      let dateParam = "";
-
+      let dateParam ="";
+    
       switch (dateRange) {
         case "today":
-          dateParam = "date:today";
+          dateParam ="date:today";
           break;
-        case "thisWeek":
-          dateParam = "date:thisweek";
+        case "thisweek":
+          dateParam ="date:thisweek";
           break;
         case "tomorrow":
-          dateParam = "date:tomorrow";
+          dateParam ="date:tomorrow";
           break;
-        case "thisMonth":
-          dateParam = "date:thismonth";
+        case "thismonth":
+          dateParam ="date:thismonth";
           break;
         default:
           // Diğer durumları veya varsayılanları işleyin
@@ -105,8 +105,8 @@ const HomeScreen = () => {
             q: `Events in ${searchQuery}`,
             hl: "en",
             gl: "us",
-            htichips: `event_type:Virtual-Event,${dateParam}`,
-            api_key: "66bc835bfca5167c1ad92cf9cc998f1a691351f39b6c9a11c7c956077d77a7dd",
+            htichips: `event_type:Virtual-Event,${selectedDateRange}`,
+            api_key:"66bc835bfca5167c1ad92cf9cc998f1a691351f39b6c9a11c7c956077d77a7dd",
           },
         })
         .then((response) => {
@@ -118,9 +118,11 @@ const HomeScreen = () => {
         });
     };
 
+
+
     // handleDateButtonClick fonksiyonunu kullanabilirsiniz
     handleDateButtonClick("today"); // Örnek olarak "today" ile çağırdım, gerektiğiniz yerde farklı bir tarih aralığı ile çağırabilirsiniz.
-  }, [searchQuery]); 
+  }, [searchQuery]);
 
   return (
     <View style={styles.container}>
@@ -138,18 +140,20 @@ const HomeScreen = () => {
           }}
         >
           <View style={styles.menu}>
-            <MaterialCommunityIcons
-              name="microsoft-xbox-controller-menu"
-              size={34}
-              color="black"
-            />
+            <TouchableOpacity onPress={() => navigation.navigate("ProfileScreen")}>
+              <MaterialCommunityIcons name="account-circle-outline" size={34} color="black" />
+          </TouchableOpacity>
+           
             <Text style={styles.text}>HOME</Text>
-            <Ionicons
-              name="heart-circle-outline"
-              size={34}
-              color="black"
-              style={styles.text1}
-            />
+            <TouchableOpacity onPress={() => navigation.navigate("Favorite")}>
+              <Ionicons
+                name="heart-circle-outline"
+                size={34}
+                color="black"
+                style={styles.text1}
+              />
+            </TouchableOpacity>
+
           </View>
           <View style={styles.inputContainer}>
             <EvilIcons
@@ -171,75 +175,75 @@ const HomeScreen = () => {
               firebase.auth().signOut();
             }}
           ></Pressable>
-                  <View style={styles.buttonS}>
-                      <TouchableOpacity
-                          style={[styles.buttonDate, { backgroundColor: "orange" }]}
-                          onPress={() => handleDateButtonClick("today")}
-                      >
-                          <Text style={styles.buttonText}>Today</Text>
-                      </TouchableOpacity>
-                      <TouchableOpacity
-                          style={[styles.buttonDate, { backgroundColor: "orange" }]}
-                          onPress={() => handleDateButtonClick("thisWeek")}
-                      >
-                          <Text style={styles.buttonText}>This Week</Text>
-                      </TouchableOpacity>
-                      <TouchableOpacity
-                          style={[styles.buttonDate, { backgroundColor: "orange" }]}
-                          onPress={() => handleDateButtonClick("tomorrow")}
-                      >
-                          <Text style={styles.buttonText}>Tomorrow</Text>
-                      </TouchableOpacity>
-                      <TouchableOpacity
-                          style={[styles.buttonDate, { backgroundColor: "orange" }]}
-                          onPress={() => handleDateButtonClick("thisMonth")}
-                      >
-                          <Text style={styles.buttonText}>This Month</Text>
-                      </TouchableOpacity>
-                  </View>
-                  <View style={styles.dateE}>
-                      <ScrollView horizontal showsVerticalScrollIndicator={false}>
-                          {eventss.map((events, index) => (
-                              <View key={index} style={styles.eventsContainer}>
-                                  <TouchableOpacity
-                                      key={index}
-                                      onPress={() => navigateToEventDetails(events)}
-                                  >
-                                      <ImageBackground
-                                          source={images[randomImageFileName()]} // Resim dosyasını nesneden alın
-                                          style={styles.backgroundImg}
-                                      >
-                                          <View style={styles.headerr}>
-                                              <View style={styles.etitlee}>
-                                                  <Text style={styles.eventTitle}>{events.title}</Text>
-                                              </View>
-                                              <TouchableOpacity>
-                                      <View style={styles.icon}>
-                                        <MaterialIcons
-                                          name="favorite"
-                                          size={24}
-                                          color="white"
-                                        />
-                                      </View>
-                                              </TouchableOpacity>
-                                             
-                                          </View>
-                                          <View style={styles.time}>
-                                              <Text style={styles.eventDate}>{events.date.when}</Text>
-                                          </View>
-                                      </ImageBackground>
-                                  </TouchableOpacity>
-                              </View>
-                          ))}
-                      </ScrollView>
-                  </View>
+          <View style={styles.buttonS}>
+            <TouchableOpacity
+              style={[styles.buttonDate, { backgroundColor: "orange" }]}
+              onPress={() => setSelectedDateRange("today")}
+            >
+              <Text style={styles.buttonText}>Today</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.buttonDate, { backgroundColor: "orange" }]}
+              onPress={() => setSelectedDateRange("thisweek")}
+            >
+              <Text style={styles.buttonText}>This Week</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.buttonDate, { backgroundColor: "orange" }]}
+              onPress={() => setSelectedDateRange("tomorrow")}
+            >
+              <Text style={styles.buttonText}>Tomorrow</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.buttonDate, { backgroundColor: "orange" }]}
+              onPress={() => setSelectedDateRange("thismonth")}
+            >
+              <Text style={styles.buttonText}>This Month</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.dateE}>
+            <ScrollView horizontal showsVerticalScrollIndicator={false}>
+              {eventss.map((events, index) => (
+                <View key={index} style={styles.eventsContainer}>
+                  <TouchableOpacity
+                    key={index}
+                    onPress={() => navigateToEventDetails(events)}
+                  >
+                    <ImageBackground
+                      source={images[randomImageFileName()]} // Resim dosyasını nesneden alın
+                      style={styles.backgroundImag}
+                    >
+                      <View style={styles.headerr}>
+                        <View style={styles.etitlee}>
+                          <Text style={styles.eventTitle}>{events.title}</Text>
+                        </View>
+                        <TouchableOpacity onPress={() => toggleFavorite(events)}>
+                          <View style={styles.icn}>
+                            <MaterialIcons
+                              name={favorites.includes(events) ? "favorite" : "favorite-border"}
+                              size={24}
+                              color="white"
+                            />
+                          </View>
+                        </TouchableOpacity>
+
+                      </View>
+                      <View style={styles.time}>
+                        <Text style={styles.eventDate}>{events.date.when}</Text>
+                      </View>
+                    </ImageBackground>
+                  </TouchableOpacity>
+                </View>
+              ))}
+            </ScrollView>
+          </View>
           <View style={styles.ki}>
             <Text style={styles.z}>Recommend Event</Text>
             <Text style={styles.k}>View All</Text>
           </View>
           <ScrollView horizontal showsVerticalScrollIndicator={false}>
             {eventss.map((events, index) => (
-              <View key={index} style={styles.eventsContainer}>
+              <View key={index} style={styles.eventContainer}>
                 <TouchableOpacity
                   key={index}
                   onPress={() => navigateToEventDetails(events)}
@@ -292,10 +296,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: 20,
     height: 20,
-    marginLeft:20,
-    marginRight:60,
-    width:10
+    marginLeft: 20,
+    marginRight: 60,
+    width: 10
   },
+
   headerr: {
     display: "flex",
     flexDirection: "row",
@@ -315,37 +320,50 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     height: 230,
     width: 300,
-  }, backgroundImg: {
-    marginTop:10,
+  }, backgroundImag: {
+    marginTop: 10,
     flex: 0.5, // Ana arka plan görselinin tüm alanı kaplaması için flex ekliyoruz
     // Görselin ekranı kaplamasını sağlıyoruz
     borderRadius: 100,
     height: 200,
     width: 170,
+  }, backgroundImg: {
+    marginTop: 10,
+    flex: 0.5, // Ana arka plan görselinin tüm alanı kaplaması için flex ekliyoruz
+    // Görselin ekranı kaplamasını sağlıyoruz
+    borderRadius: 100,
+    height: 200,
+    width: 270,
   },
-  buttonS: { display: "flex", flexDirection: "row",
-  marginLeft:20,
-  marginRight:20,
-marginTop:20 },
+  buttonS: {
+    display: "flex", flexDirection: "row",
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 20
+  },
   text: {
     fontSize: 32,
     color: "white",
     marginLeft: 90,
     marginRight: 90,
   },
-    buttonDate: {
-        width: 80,
-        height: 40,
-        borderRadius: 40,
-        marginRight:10,
-        backgroundColor:"orange",
-        alignItems:"center",
-        justifyContent:"center"
-    },
+  buttonDate: {
+    width: 80,
+    height: 40,
+    borderRadius: 40,
+    marginRight: 10,
+    backgroundColor: "orange",
+    alignItems: "center",
+    justifyContent: "center"
+  },
   etitle: { height: 40, width: 250 },
+  icn: {
+    width: 40,
+    marginRight: 10
+  },
   icon: {
-   width:40,
-   marginRight:10
+    width:40,
+    marginRight:40
   },
   eventContainer: {
     padding: 10,
@@ -379,7 +397,7 @@ marginTop:20 },
     width: 200,
     overflow: "hidden", // Görselin sınırlarını aşan kısmını kesmek için overflow ekliyoruz
   },
-  
+
   ki: {
     display: "flex",
     flexDirection: "row",
@@ -410,7 +428,7 @@ marginTop:20 },
     fontSize: 14,
   },
   time: {
-    backgroundColor:"orange",
+    backgroundColor: "orange",
     height: 50,
     borderRadius: 10,
     marginTop: 120,

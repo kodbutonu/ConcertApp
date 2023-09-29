@@ -65,7 +65,7 @@ const EmailScreen = () => {
             <KeyboardAvoidingView>
                 <View style={{ alignItems: "center", justifyContent: "space-between" }}>
                     <Image
-                        style={{ height: 150, width: 150, marginTop: 40 }}
+                        style={{ height: 150, width: 180, marginTop: 40 }}
                         source={require("../assets/logox.png")}
                     />
                 </View>

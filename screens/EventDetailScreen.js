@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
   },
+  
   circle: {
     backgroundColor: "cyan",
     width: 10,
@@ -114,6 +115,11 @@ const styles = StyleSheet.create({
     width: 400,
     height: 900,
     borderRadius: 10,
+  }, backgroundImage: {
+    flex: 1, // Ana arka plan görselinin tüm alanı kaplaması için flex ekliyoruz
+    resizeMode: "cover", // Görselin ekranı kaplamasını sağlıyoruz
+    borderRadius: 20,
+    height:1000
   },
   title: {
     fontSize: 34,
@@ -132,7 +138,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 18,
     marginTop: 16,
-    color: "#363636",
+    color: "black",
   },
   back: {
     height: 40,

@@ -14,6 +14,7 @@ import { AntDesign } from "@expo/vector-icons";
 const DateScreen = ({ route }) => {
     const navigation = useNavigation();
     const { events } = route.params;
+    console.log(events);
     const images = {
         z: require("../assets/z.png"),
         x: require("../assets/x.png"),
@@ -130,7 +131,7 @@ const styles = StyleSheet.create({
     description: {
         fontSize: 18,
         marginTop: 16,
-        color: "#363636",
+        color: "black",
     },
     back: {
         height: 40,

@@ -19,7 +19,7 @@ const RegisterScreen = () => {
     const navigation = useNavigation();
     const handleRegisterPress = () => {
         registerUser(email, password, firstName, lastName);
-        navigation.navigate("Email")
+        navigation.navigate("User")
     };
     const [input, setInput] = useState("");
     const [password, setPassword] = useState("");

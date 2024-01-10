@@ -9,6 +9,7 @@
 
 le dolu bir dünyanın kapılarını açar. İşte Concert App'in sunduğu bazı özellikler:
 
+https://github.com/kodbutonu/ConcertApp/assets/80709273/d7954faa-51c4-404c-971e-968cc60c2160
 Concert App İle Etkinlikleri Yakından Takip Edin:
 
 Konserler ve Etkinlikler: Concert App, dünyanın dört bir yanındaki konserleri ve etkinlikleri tek bir yerde toplar. Hangi sanatçının, grupların veya etkinliklerin nerede ve ne zaman sahne alacağını anında öğrenin.
@@ -17,7 +18,7 @@ Sanatçı Bilgileri: Etkinliklere katılan sanatçılar hakkında ayrıntılı b
 
 Bilet Satın Alma: Konser biletlerinizi doğrudan uygulama üzerinden satın alın. Basit ve güvenli bir şekilde biletlerinizi alarak etkinliklere hemen katılabilirsiniz.
 </p>
-https://github.com/kodbutonu/ConcertApp/assets/80709273/d7954faa-51c4-404c-971e-968cc60c2160
+
 ## Teknolojiler
 
 <p>Teknolojik Altyapı: React Native ve JavaScript

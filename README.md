@@ -6,7 +6,6 @@
 <p>
   Concert App, müziği sevenler için tasarlanmış yenilikçi bir mobil uygulamadır. Bu uygulama, dünya genelindeki konser ve etkinlikleri takip etmenizi sağlar ve müzik
 
-https://github.com/kodbutonu/ConcertApp/assets/80709273/d7954faa-51c4-404c-971e-968cc60c2160
 
 le dolu bir dünyanın kapılarını açar. İşte Concert App'in sunduğu bazı özellikler:
 
@@ -18,7 +17,7 @@ Sanatçı Bilgileri: Etkinliklere katılan sanatçılar hakkında ayrıntılı b
 
 Bilet Satın Alma: Konser biletlerinizi doğrudan uygulama üzerinden satın alın. Basit ve güvenli bir şekilde biletlerinizi alarak etkinliklere hemen katılabilirsiniz.
 </p>
-
+https://github.com/kodbutonu/ConcertApp/assets/80709273/d7954faa-51c4-404c-971e-968cc60c2160
 ## Teknolojiler
 
 <p>Teknolojik Altyapı: React Native ve JavaScript
